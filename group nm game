@@ -1,0 +1,85 @@
+I was by myself so i just handed what i had before because i have nothing else 
+
+
+/* Juvantha
+* Ms.McCaffery
+* ICUS3
+* Description- 
+A program created so the computer always wins no matter what
+*/
+import java.util.*;
+public class NimGame
+{
+  public static void main(String [] args)
+  {
+    //opening new scanner
+    Scanner myInput = new Scanner(System.in);
+    int ofsticks = 13;//declaring number of sticks
+  //outputing instuctions
+    System.out.println("Hi, This is the Nim game.  there are instructions to it. There are 13 sticks to start. user (you) will go first, choosing 1,2, or 3 sticks out of the pile. Then I the computer will pick 1,2, or 3 sticks and we will continue until someone has to take the last stick and that person will lose. Have fun!");
+    //inputing yes to start game
+    System.out.println("If you are ready to begin type in yes");
+    String start = myInput.next();
+    //loop 
+    while (start.equals("yes") || start.equals("Yes") || start.equals("yes"))
+    {
+    System.out.println(" let's start");
+    //basic game with if and else statements and outputs of remainging sticks
+    System.out.println("There are 13 sticks how many sticks you choosing 1,2, or 3 sticks to take?");
+    int firstturn = myInput.nextInt();
+    if (firstturn == 1)
+    {
+      System.out.println("You have picked 1 stick, I choose to take three, there are 9 sticks remaining");
+    }
+    else if (firstturn == 2)
+    {
+      System.out.println("You have picked 2 sticks, I choose to take two, there are 9 sticks remaining");
+    }
+    else if (firstturn == 3)
+    {
+      System.out.println("You have picked 3 sticks, I choose to take 1, there are 9 sticks remaining");
+    }
+    System.out.println("There are 9 sticks left would you like to choose 1,2, or 3 sticks to take?");
+    int secondturn = myInput.nextInt();
+    if (secondturn == 1)
+    {
+      System.out.println("You have chosen 1 stick, I choose to take three, there are 5 sticks remaining");
+    }
+    else if (secondturn == 2)
+    {
+      System.out.println("You have chosen 2 sticks, I choose to take two, there are 5 sticks remaining");
+    }
+    else if (secondturn == 3)
+    {
+      System.out.println("You have chosen 3 sticks, I choose to take one, there are 5 sticks remaining");
+    }
+    System.out.println("There are 5 sticks remaining would you like to take 1,2, or 3 sticks?");
+      int thirdturn = myInput.nextInt();
+      if (thirdturn == 1)
+    {
+      System.out.println("You have chosen 1 stick, I choose to take three, there are 1 sticks remaining");
+      System.out.println("HaHa I win, better luck next time");
+      //loop
+      System.out.println("Would you like to play again? Enter Yes to play again, enter no to not play again");
+      start = myInput.next();
+    }
+    else if (thirdturn == 2)
+    {
+      System.out.println("You have chosen 2 stick, I choose to take two, there are 1 sticks remaining");
+      System.out.println(" I win too bad so sad, better luck next time");
+      //loop
+      System.out.println("Would you like to play again? Enter Yes to play again, enter no to not play again");
+      start = myInput.next();
+    }
+    else if (thirdturn == 3)
+    {
+      System.out.println("You have picked 3 stick, I choose to take 1, there are 1 sticks remaining");
+      System.out.println("HaHa I win once again too bad so sad, better luck next time");
+      //loop
+      System.out.println("Would you like to play again? Enter Yes to play again, enter no to not play again");
+      start = myInput.next();
+    }
+     
+  }
+}
+}
